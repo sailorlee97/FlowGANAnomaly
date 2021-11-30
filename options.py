@@ -1,8 +1,12 @@
 #-*-coding:GBK -*-
 """ Options
-
-This script is largely based on junyanz/pytorch-CycleGAN-and-pix2pix.
-
+@Time    : 2021/10/22 10:30
+-------------------------------------------------
+@Author  : sailorlee(lizeyi)
+@email   : chrislistudy@163.com
+-------------------------------------------------
+@FileName: option.py
+@Software: PyCharm
 Returns:
     [argparse]: Class containing argparse
 """
@@ -11,11 +15,10 @@ import argparse
 import os
 import torch
 
-# pylint: disable=C0103,C0301,R0903,W0622
 
 class Options():
     """Options class
-    更换数据集需要更改两个参数：1 dataset 2 feature
+    need change two arg：1 dataset 2 feature
     Returns:
         [argparse]: argparse containing train and test options
     """

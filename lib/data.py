@@ -1,4 +1,10 @@
 """
+@Time    : 2021/10/22 10:30
+-------------------------------------------------
+@Author  : sailorlee(lizeyi)
+@email   : chrislistudy@163.com
+-------------------------------------------------
+@Software: PyCharm
 LOAD DATA from file.
 """
 

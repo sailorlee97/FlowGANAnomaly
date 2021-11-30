@@ -1,6 +1,11 @@
 """ Network architectures.
+@Time    : 2021/10/22 10:30
+-------------------------------------------------
+@Author  : sailorlee(lizeyi)
+@email   : chrislistudy@163.com
+-------------------------------------------------
+@Software: PyCharm
 """
-# pylint: disable=W0221,W0622,C0103,R0913
 
 ##
 import torch

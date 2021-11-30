@@ -4,7 +4,7 @@
 @Author  : sailorlee(lizeyi)
 @email   : chrislistudy@163.com
 -------------------------------------------------
-@FileName: plt_box_total.py
+@FileName: train.py
 @Software: PyCharm
 
 TRAIN GANOMALY

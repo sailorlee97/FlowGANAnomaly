@@ -1,5 +1,10 @@
 """ Evaluate ROC
-
+@Time    : 2021/10/22 10:30
+-------------------------------------------------
+@Author  : sailorlee(lizeyi)
+@email   : chrislistudy@163.com
+-------------------------------------------------
+@Software: PyCharm
 Returns:
     auc, eer: Area under the curve, Equal Error Rate
 """

@@ -1,11 +1,13 @@
 """
+@Time    : 2021/10/22 10:30
+-------------------------------------------------
+@Author  : sailorlee(lizeyi)
+@email   : chrislistudy@163.com
+-------------------------------------------------
+@Software: PyCharm
 Losses
 """
-# pylint: disable=C0301,C0103,R0902,R0915,W0221,W0622
-
-
 ##
-# LIBRARIES
 import torch
 
 ##

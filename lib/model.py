@@ -1,7 +1,11 @@
-"""GANomaly
+"""FlowADGAN
+@Time    : 2021/10/22 10:30
+-------------------------------------------------
+@Author  : sailorlee(lizeyi)
+@email   : chrislistudy@163.com
+-------------------------------------------------
+@Software: PyCharm
 """
-# pylint: disable=C0301,E1101,W0622,C0103,R0902,R0915
-
 ##
 from collections import OrderedDict
 import os
