@@ -7,11 +7,10 @@
 @FileName: train.py
 @Software: PyCharm
 
-TRAIN GANOMALY
+TRAIN FlowADGAN
 . Example: Run the following command from the terminal.
     run train.py                             \
-        --model ganomaly                        \
-        --dataset UCSD_Anomaly_Dataset/UCSDped1 \
+        --model FlowADGAN                        \
         --batchsize 32                          \
         --isize 256                         \
         --nz 512                                \
