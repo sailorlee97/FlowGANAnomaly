@@ -27,7 +27,6 @@ from options import Options
 from lib.data import load_data
 from lib.model import FlowADGAN
 from load_data.process_nslkdd import main_process_nsl
-from eva.plot_culve import plot_tsne
 import torch
 from load_data.preprocessing import main_process_unsw
 ##
