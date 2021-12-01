@@ -30,7 +30,7 @@ class Options():
 
         ##
         # Base
-        self.parser.add_argument('--dataset', default='unsw', help='folder | cifar10 | mnist | unsw | cicids | nsl | cicids-type | unsw-type | cicids-roc')
+        self.parser.add_argument('--dataset', default='nsl', help='folder | cifar10 | mnist | unsw | cicids | nsl | cicids-type | unsw-type | cicids-roc')
         self.parser.add_argument('--dataroot', default='', help='path to dataset')
         self.parser.add_argument('--batchsize', type=int, default=64, help='input batch size')
         self.parser.add_argument('--workers', type=int, help='number of data loading workers', default=8)
@@ -58,7 +58,7 @@ class Options():
 
         ##
         # Train
-        self.parser.add_argument('--feature', type=int, default=194,help='the number of feature , such as  unsw 194 | nsl 116 | cicids 78 | KDD99 122 ')
+        self.parser.add_argument('--feature', type=int, default=116,help='the number of feature , such as  unsw 194 | nsl 116 | cicids 78 | KDD99 122 ')
         self.parser.add_argument('--print_freq', type=int, default=100, help='frequency of showing training results on console')
         self.parser.add_argument('--save_image_freq', type=int, default=100, help='frequency of saving real and fake images')
         self.parser.add_argument('--save_test_images', action='store_true', help='Save test images for demo.')
