@@ -8,8 +8,6 @@
 LOAD DATA from file.
 """
 
-# pylint: disable=C0301,E1101,W0622,C0103,R0902,R0915
-
 ##
 import os
 import torch

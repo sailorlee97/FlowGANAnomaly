@@ -25,7 +25,7 @@ from __future__ import print_function
 from torch.utils.data import DataLoader,TensorDataset
 from options import Options
 from lib.data import load_data
-from lib.model import Ganomaly
+from lib.model import FlowADGAN
 from load_data.process_nslkdd import main_process_nsl
 from eva.plot_culve import plot_tsne
 import torch
@@ -44,7 +44,7 @@ def train():
 
     ##
     # LOAD MODEL
-    model = Ganomaly(opt, train_loader)
+    model = FlowADGAN(opt, train_loader)
     ##
     # TEST : get roc auc
     # model.test_malware(testload)

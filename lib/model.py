@@ -28,7 +28,7 @@ from lib.evaluate import evaluate
 from sklearn.metrics import classification_report
 
 class BaseModel():
-    """ Base Model for ganomaly
+    """ Base Model for FlowADGAN
     """
     def __init__(self, opt, dataloader):
         ##
@@ -235,7 +235,7 @@ class BaseModel():
 
     ##
     def test(self):
-        """ Test GANomaly model.
+        """ Test FlowADGAN model.
 
         Args:
             dataloader ([type]): Dataloader for the test set
@@ -355,15 +355,15 @@ class BaseModel():
 
 
 ##
-class Ganomaly(BaseModel):
-    """GANomaly Class
+class FlowADGAN(BaseModel):
+    """FlowADGAN Class
     """
 
     @property
-    def name(self): return 'Ganomaly'
+    def name(self): return 'FlowADGAN'
 
     def __init__(self, opt, dataloader):
-        super(Ganomaly, self).__init__(opt, dataloader)
+        super(FlowADGAN, self).__init__(opt, dataloader)
 
         # feature number
         self.dataloader_shape  = iter(dataloader)
