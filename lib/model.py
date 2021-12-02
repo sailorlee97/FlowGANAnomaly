@@ -178,7 +178,7 @@ class BaseModel():
                 self.save_weights(self.epoch)
             self.visualizer.print_current_performance(res, best_auc)
         print(">> Training model %s.[Done]" % self.name)
-        self.malware_eva(testload)
+        # self.malware_eva(testload)
 
     def malware_eva(self,testload):
         path = "./output/{}/{}/train/weights/netG.pth".format(self.name.lower(), self.opt.dataset)
