@@ -90,9 +90,10 @@ class Options():
                 self.opt.gpu_ids.append(id)
 
         # set gpu ids
-        if self.opt.device == 'gpu':
-            torch.cuda.set_device(self.opt.gpu_ids[0])
-        # self.opt.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
+        # if self.opt.device == 'gpu':
+        #     torch.cuda.set_device(self.opt.gpu_ids[0])
+        print(self.opt.device)
+        self.opt.device = torch.device("cuda" if torch.cuda.is_available() else "cpu")
 
         args = vars(self.opt)
 

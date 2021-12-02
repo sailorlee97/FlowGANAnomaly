@@ -377,8 +377,15 @@ class FlowADGAN(BaseModel):
 
         ##
         # Create and initialize networks.
-        self.netg = NetG(self.opt,self.feature_number).to(self.device)
-        self.netd = NetD(self.opt,self.feature_number).to(self.device)
+        self.netg = NetG(self.opt,self.feature_number).cuda(self.opt.device)
+        self.netd = NetD(self.opt,self.feature_number).cuda(self.opt.device)
+
+        print(torch.cuda.device_count() > 1)
+        if torch.cuda.device_count() > 1:
+            self.netg = torch.nn.DataParallel(self.netg)
+            self.netd = torch.nn.DataParallel(self.netd)
+            pass
+
         self.netg.apply(weights_init)
         self.netd.apply(weights_init)
 
