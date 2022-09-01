@@ -4,7 +4,7 @@ batchsize: 64
 beta1: 0.5
 dataroot: 
 dataset: nsl
-device: gpu
+device: cuda
 display: False
 display_id: 0
 display_port: 8097
