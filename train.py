@@ -7,10 +7,10 @@
 @FileName: train.py
 @Software: PyCharm
 
-TRAIN FlowADGAN
+TRAIN FlowGANAnomaly
 . Example: Run the following command from the terminal.
     run train.py                             \
-        --model FlowADGAN                        \
+        --model FlowGANAnomaly                        \
         --batchsize 32                          \
         --isize 256                         \
         --nz 512                                \
@@ -22,13 +22,10 @@ TRAIN FlowADGAN
 ##
 # LIBRARIES
 from __future__ import print_function
-from torch.utils.data import DataLoader,TensorDataset
 from options import Options
 from lib.data import load_data
-from lib.model import FlowADGAN
-from load_data.process_nslkdd import main_process_nsl
-import torch
-from load_data.preprocessing import main_process_unsw
+from lib.model import FlowGANAnomaly
+
 ##
 def train():
     """ Training
@@ -43,7 +40,7 @@ def train():
 
     ##
     # LOAD MODEL
-    model = FlowADGAN(opt, train_loader)
+    model = FlowGANAnomaly(opt, train_loader)
     ##
     # TEST : get roc auc
     # model.test_malware(testload)

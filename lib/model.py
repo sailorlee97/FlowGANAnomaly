@@ -1,4 +1,4 @@
-"""FlowADGAN
+"""FlowGANAnomaly
 @Time    : 2021/10/22 10:30
 -------------------------------------------------
 @Author  : sailorlee(lizeyi)
@@ -28,7 +28,7 @@ from lib.evaluate import evaluate
 from sklearn.metrics import classification_report
 
 class BaseModel():
-    """ Base Model for FlowADGAN
+    """ Base Model for FlowGANAnomaly
     """
     def __init__(self, opt, dataloader):
         ##
@@ -235,7 +235,7 @@ class BaseModel():
 
     ##
     def test(self):
-        """ Test FlowADGAN model.
+        """ Test FlowGANAnomaly model.
 
         Args:
             dataloader ([type]): Dataloader for the test set
@@ -320,6 +320,7 @@ class BaseModel():
             print('   Loaded weights.')
         self.an_scores = torch.zeros(size=(len(testload.dataset),), dtype=torch.float32, device=self.device)
         self.gt_labels = torch.zeros(size=(len(testload.dataset),), dtype=torch.long,    device=self.device)
+        self.an_scores_adv = torch.zeros(size=(len(testload.dataset),), dtype=torch.float32, device=self.device)
         self.latent_i  = torch.zeros(size=(len(testload.dataset), self.opt.nz), dtype=torch.float32, device=self.device)
         self.latent_o  = torch.zeros(size=(len(testload.dataset), self.opt.nz), dtype=torch.float32, device=self.device)
         self.times = []
@@ -333,20 +334,26 @@ class BaseModel():
                 time_i = time.time()
                 self.set_input(data)
                 self.fake, latent_i, latent_o = self.netg(self.input)
+                classifier, features = self.netd(self.input)
                 error = torch.mean(torch.pow((latent_i - latent_o), 2), dim=1)
                 time_o = time.time()
-
+                self.an_scores_adv[
+                i * self.opt.batchsize: i * self.opt.batchsize + classifier.size(0)] = classifier.reshape(
+                    classifier.size(0))
                 self.an_scores[i * self.opt.batchsize: i * self.opt.batchsize + error.size(0)] = error.reshape(error.size(0))
                 self.gt_labels[i * self.opt.batchsize: i * self.opt.batchsize + error.size(0)] = self.gt.reshape(error.size(0))
                 self.times.append(time_o - time_i)
 
             self.an_scores = (self.an_scores - torch.min(self.an_scores)) / (
                         torch.max(self.an_scores) - torch.min(self.an_scores))
+            scores_adv = self.an_scores_adv.cpu().detach().numpy()
+            scores_hidden = self.an_scores.cpu().detach().numpy()
+            prob = self.opt.lamb * scores_hidden + (1 - self.opt.lamb) * scores_adv
             # Measure inference time.
             self.times = np.array(self.times)
             self.times = np.mean(self.times[:100] * 1000)
             # auc, eer = roc(self.gt_labels, self.an_scores)
-            auc = evaluate(self.gt_labels, self.an_scores, metric=self.opt.metric)
+            auc = evaluate(self.gt_labels, prob, metric=self.opt.metric)
 
             performance = OrderedDict([('Avg Run Time (ms/batch)', self.times), (self.opt.metric, auc)])
 
@@ -355,15 +362,15 @@ class BaseModel():
 
 
 ##
-class FlowADGAN(BaseModel):
-    """FlowADGAN Class
+class FlowGANAnomaly(BaseModel):
+    """FlowGANAnomaly Class
     """
 
     @property
-    def name(self): return 'FlowADGAN'
+    def name(self): return 'FlowGANAnomaly'
 
     def __init__(self, opt, dataloader):
-        super(FlowADGAN, self).__init__(opt, dataloader)
+        super(FlowGANAnomaly, self).__init__(opt, dataloader)
 
         # feature number
         self.dataloader_shape  = iter(dataloader)
