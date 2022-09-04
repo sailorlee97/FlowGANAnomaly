@@ -24,5 +24,6 @@ datasets are from CICIDS2017(https://www.unb.ca/cic/datasets/ids-2017.html) , UN
 
 If you find this useful in your research, please consider citing:
 
-
+{
+}
 
