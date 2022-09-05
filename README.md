@@ -8,7 +8,7 @@ This project is an open-source project based on a GAN network anomaly detection 
 
 ` networks.py`:  Basic network structure, it is not recommended to change easily
 
-`option.py`: Parameter file, this file supports three data sets: UNSW-NB15, CICIDS2017 and NSL-KDD
+`option.py`: Parameter file, this file supports three data sets: UNSW-NB15, CIC-IDS2017, NSL-KDD and CIC-DDoS2019
 
 ### How to use?
 
@@ -18,7 +18,7 @@ if you want to change dataset, you need  change `--dataset` and ` --feature` par
 
 ### References
 
-datasets are from CICIDS2017(https://www.unb.ca/cic/datasets/ids-2017.html) , UNSW-NB15(https://research.unsw.edu.au/projects/unsw-nb15-dataset)
+datasets are from CICIDS2017(https://www.unb.ca/cic/datasets/ids-2017.html) , UNSW-NB15(https://research.unsw.edu.au/projects/unsw-nb15-dataset), CIC-DDoS2019(https://www.unb.ca/cic/datasets/ddos-2019.html)
 
 ### Citation
 
