@@ -27,5 +27,6 @@ CIC-DDoS2019(https://www.unb.ca/cic/datasets/ddos-2019.html)
 If you find this useful in your research, please consider citing:
 
 {
+to appear CJE
 }
 
