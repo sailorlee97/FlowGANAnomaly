@@ -26,7 +26,16 @@ CIC-DDoS2019(https://www.unb.ca/cic/datasets/ddos-2019.html)
 
 If you find this useful in your research, please consider citing:
 
-{
-to appear CJE
-}
+@articleInfo{E220173,
+title = "FlowGANAnomaly: Flow-based Anomaly Network Intrusion Detection with Adversarial Learning",
+journal = "Chinese Journal of Electronics",
+volume = "33",
+number = "E220173,
+pages = "1",
+year = "2022",
+note = "",
+issn = "",
+doi = "10.23919/cje.2022.00.173",
+url = "https://cje.ejournal.org.cn/en/article/doi/10.23919/cje.2022.00.173",
+author = "LI Zeyi","WANG Pan","WANG Zixuan",keywords = "Anomaly detection","Unsupervised learning","Generative adversarial network","Intrusion detection system"}
 
