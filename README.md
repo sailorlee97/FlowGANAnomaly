@@ -17,9 +17,11 @@ Choose a dataset for training, default NSL-KDD ,and then run ` python train.py`
 if you want to change dataset, you need  change `--dataset` and ` --feature` parameters.
 
 ### References
-
+<br>
 datasets are from CICIDS2017(https://www.unb.ca/cic/datasets/ids-2017.html) , 
+<br>
 UNSW-NB15(https://research.unsw.edu.au/projects/unsw-nb15-dataset), 
+<br>
 CIC-DDoS2019(https://www.unb.ca/cic/datasets/ddos-2019.html)
 
 ### Citation
@@ -28,20 +30,21 @@ If you find this useful in your research, please consider citing:
 
 @article{
   <br>
-  li2022flowgananomaly, 
+  &ensp;li2022flowgananomaly, 
   <br>
-  title={FlowGANAnomaly: Flow-based Anomaly Network Intrusion Detection with Adversarial Learning},
+  &ensp;title={FlowGANAnomaly: Flow-based Anomaly Network Intrusion Detection with Adversarial Learning},
   <br>
-  author={LI, Zeyi and WANG, Pan and WANG, Zixuan},
+  &ensp;author={LI, Zeyi and WANG, Pan and WANG, Zixuan},
   <br>
-  journal={Chinese Journal of Electronics},
+  &ensp;journal={Chinese Journal of Electronics},
   <br>
-  volume={33},
+  &ensp;volume={33},
   <br>
-  pages={1--15},
+  &ensp;pages={1--15},
   <br>
-  year={2022},
+  &ensp;year={2022},
   <br>
-  publisher={Chinese Journal of Electronics}
+  &ensp;publisher={Chinese Journal of Electronics}
+  <br>
 }
 
