@@ -27,13 +27,21 @@ CIC-DDoS2019(https://www.unb.ca/cic/datasets/ddos-2019.html)
 If you find this useful in your research, please consider citing:
 
 @article{
-  li2022flowgananomaly,
+  <br>
+  li2022flowgananomaly, 
+  <br>
   title={FlowGANAnomaly: Flow-based Anomaly Network Intrusion Detection with Adversarial Learning},
+  <br>
   author={LI, Zeyi and WANG, Pan and WANG, Zixuan},
+  <br>
   journal={Chinese Journal of Electronics},
+  <br>
   volume={33},
+  <br>
   pages={1--15},
+  <br>
   year={2022},
+  <br>
   publisher={Chinese Journal of Electronics}
 }
 
