@@ -8,7 +8,7 @@ This project is an open-source project based on a GAN network anomaly detection 
 
 ` networks.py`:  Basic network structure, it is not recommended to change easily
 
-`option.py`: Parameter file, this file supports three data sets: UNSW-NB15, CIC-IDS2017, NSL-KDD and CIC-DDoS2019
+`option.py`: Parameter file, this file supports four data sets: UNSW-NB15, CIC-IDS2017, NSL-KDD and CIC-DDoS2019
 
 ### How to use?
 
