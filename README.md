@@ -48,6 +48,9 @@ This repository adapts the code published under the [Semi-supervised Anomaly Det
   organization={Springer}
 }
 ```
+## 🚀 Star History
+
+[![Star History Chart](https://api.star-history.com/svg?repos=AIDC-AI/Parrot&type=Date)](https://star-history.com/#AIDC-AI/Parrot&Date)
 
 ### Funding
 The paper is sponsored by National Natural Science Fundation (General Program) Grant 61972211, China,National Key Research and Development Project Grant 2020YFB1804700, China, and Future Network Innovation Research and Application Projects No.2021FNA02006.
