@@ -10,6 +10,12 @@ This project is an open-source project based on a GAN network anomaly detection 
 
 `option.py`: Parameter file, this file supports four data sets: UNSW-NB15, CIC-IDS2017, NSL-KDD and CIC-DDoS2019
 
+## 🦜 Model
+
+<div align="center">
+  <img src="./images/model.png" width="600px" />
+</div>
+
 ### How to use?
 
 Choose a dataset for training, default NSL-KDD ,and then run ` python train.py`
