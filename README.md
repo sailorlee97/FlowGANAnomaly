@@ -13,7 +13,7 @@ This project is an open-source project based on a GAN network anomaly detection 
 ## 🦜 Model
 
 <div align="center">
-  <img src="./images/model.png" width="600px" />
+  <img src="./images/model.jpg" width="600px" />
 </div>
 
 ### How to use?
